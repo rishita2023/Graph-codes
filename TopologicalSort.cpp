@@ -43,11 +43,11 @@ for(int i=0;i<V;i++){
     q.push(i);
   }
 }
-vector<int>tops;
+vector<int>top_s;
 while(!q.empty()){
   int node=q.front();
   q.pop();
-  tops.push_back(node);
+  top_s.push_back(node);
   for(auto it: adj[node]){
     indegree[it]--;
     if(indegree[it]==0){
@@ -55,7 +55,7 @@ while(!q.empty()){
     }
   }
 }
-return tops;
+return top_s;
 }
 
 
